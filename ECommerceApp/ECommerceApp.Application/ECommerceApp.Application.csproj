@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Application only knows about Domain. It never references Infrastructure or API. -->
+    <ProjectReference Include="..\ECommerceApp.Domain\ECommerceApp.Domain.csproj" />
+  </ItemGroup>
+
+  <!--
+    This layer is still empty - that's OK!
+    In a later session we'll add things like:
+      - IProductService, IBrandService, ITypeService (interfaces)
+      - ProductService, BrandService, TypeService (implementations)
+      - DTOs (the shapes we send back to the client)
+  -->
+
+</Project>
