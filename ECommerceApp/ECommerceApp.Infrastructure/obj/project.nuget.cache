@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KZbVQz2OfCA=",
+  "dgSpecHash": "YBoe+JBibYg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Infrastructure\\ECommerceApp.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Infrastructure\\ECommerceApp.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\yasse\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\yasse\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\yasse\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\yasse\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

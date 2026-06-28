@@ -1,6 +1,45 @@
-@ECommerceApp.API_HostAddress = https://localhost:7001
+@host = https://localhost:7001
 
-GET {{ECommerceApp.API_HostAddress}}/weatherforecast/
+### Get all products (page 1, default page size)
+GET {{host}}/api/products
 Accept: application/json
 
-###
+### Get product by id
+GET {{host}}/api/products/1
+Accept: application/json
+
+### Get all brands
+GET {{host}}/api/products/brands
+Accept: application/json
+
+### Get all types
+GET {{host}}/api/products/types
+Accept: application/json
+
+### Filter by brand
+GET {{host}}/api/products?brandId=2
+Accept: application/json
+
+### Filter by type
+GET {{host}}/api/products?typeId=1
+Accept: application/json
+
+### Filter by brand AND type together
+GET {{host}}/api/products?brandId=2&typeId=1
+Accept: application/json
+
+### Search by name
+GET {{host}}/api/products?search=jacket
+Accept: application/json
+
+### Sort by price descending
+GET {{host}}/api/products?sort=priceDesc
+
+### Sort by price ascending
+GET {{host}}/api/products?sort=priceAsc
+
+### Pagination - page 2, 4 products per page
+GET {{host}}/api/products?pageIndex=2&pageSize=4
+
+### Combine everything - search + sort + paging
+GET {{host}}/api/products?search=shirt&sort=priceAsc&pageIndex=1&pageSize=5

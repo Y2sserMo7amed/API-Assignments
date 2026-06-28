@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AutoMapper/13.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -1496,7 +1512,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "ECommerceApp.Domain": "1.0.0"
+          "AutoMapper": "13.0.1",
+          "ECommerceApp.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "compile": {
           "bin/placeholder/ECommerceApp.Application.dll": {}
@@ -1518,6 +1537,21 @@
     }
   },
   "libraries": {
+    "AutoMapper/13.0.1": {
+      "sha512": "/Fx1SbJ16qS7dU4i604Sle+U9VLX+WSNVJggk6MupKVkYvvBm4XqYaeFuf67diHefHKHs50uQIS2YEDFhPCakQ==",
+      "type": "package",
+      "path": "automapper/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.13.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net6.0/AutoMapper.dll",
+        "lib/net6.0/AutoMapper.xml"
+      ]
+    },
     "Azure.Core/1.38.0": {
       "sha512": "IuEgCoVA0ef7E4pQtpC3+TkPbzaoQfa77HlfJDmfuaJUCVJmn7fT0izamZiryW5sYUFKizsftIxMkXKbgIcPMQ==",
       "type": "package",
@@ -4044,11 +4078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Infrastructure\\ECommerceApp.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Infrastructure\\ECommerceApp.Infrastructure.csproj",
       "projectName": "ECommerceApp.Infrastructure",
-      "projectPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Infrastructure\\ECommerceApp.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Infrastructure\\ECommerceApp.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\yasse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4069,11 +4103,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Application\\ECommerceApp.Application.csproj": {
-              "projectPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Application\\ECommerceApp.Application.csproj"
+            "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Application\\ECommerceApp.Application.csproj": {
+              "projectPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Application\\ECommerceApp.Application.csproj"
             },
-            "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Domain\\ECommerceApp.Domain.csproj": {
-              "projectPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session01\\ECommerceApp\\ECommerceApp.Domain\\ECommerceApp.Domain.csproj"
+            "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Domain\\ECommerceApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\yasse\\Downloads\\ECommerceApp_Session03\\ECommerceApp\\ECommerceApp.Domain\\ECommerceApp.Domain.csproj"
             }
           }
         }
