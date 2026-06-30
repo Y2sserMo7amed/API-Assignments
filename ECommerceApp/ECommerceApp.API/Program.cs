@@ -1,3 +1,5 @@
+using ECommerceApp.Application;
+using ECommerceApp.Infrastructure;
 using ECommerceApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,8 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddDbContext<StoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();
 
@@ -19,6 +25,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.UseStaticFiles();
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<StoreDbContext>();
+    await StoreContextSeed.SeedAsync(dbContext, app.Environment.ContentRootPath);
+}
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -26,5 +42,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-

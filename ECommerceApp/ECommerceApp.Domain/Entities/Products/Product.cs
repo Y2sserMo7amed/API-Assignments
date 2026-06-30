@@ -2,7 +2,7 @@ using ECommerceApp.Domain.Common;
 
 namespace ECommerceApp.Domain.Entities.Products
 {
-   
+ 
     public class Product : BaseEntity<int>
     {
         public string Name { get; set; } = default!;
@@ -10,6 +10,11 @@ namespace ECommerceApp.Domain.Entities.Products
         public string PictureUrl { get; set; } = default!;
         public decimal Price { get; set; }
 
-      
+       
+        public int BrandId { get; set; }
+        public ProductBrand Brand { get; set; } = default!;
+
+        public int TypeId { get; set; }
+        public ProductType Type { get; set; } = default!;
     }
 }

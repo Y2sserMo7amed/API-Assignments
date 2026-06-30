@@ -7,16 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- AutoMapper handles entity -> DTO mapping, and also gives us AddAutoMapper() for DI -->
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <!-- Needed for IServiceCollection (ApplicationServicesRegistration.cs) -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <!-- Needed for IConfiguration (PictureUrlResolver.cs) -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- Application only knows about Domain. It never references Infrastructure or API. -->
     <ProjectReference Include="..\ECommerceApp.Domain\ECommerceApp.Domain.csproj" />
   </ItemGroup>
 
-  <!--
-    This layer is still empty - that's OK!
-    In a later session we'll add things like:
-      - IProductService, IBrandService, ITypeService (interfaces)
-      - ProductService, BrandService, TypeService (implementations)
-      - DTOs (the shapes we send back to the client)
-  -->
 
 </Project>
