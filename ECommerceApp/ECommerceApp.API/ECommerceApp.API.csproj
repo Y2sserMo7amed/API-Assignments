@@ -8,11 +8,17 @@
 
   <ItemGroup>
     <!-- Adds Swagger so we get a nice page to test our endpoints in the browser -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <!--
+      Required for "Add-Migration" / "dotnet ef migrations add" to work.
+      The EF Tools need this Design package present in whichever project
+      is set as the StartupProject (our API project), even though the
+      actual DbContext lives in Infrastructure.
+    -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.28">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
