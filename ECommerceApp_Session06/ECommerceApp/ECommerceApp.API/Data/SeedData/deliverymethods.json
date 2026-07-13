@@ -1,0 +1,5 @@
+[
+  { "ShortName": "Standard", "Description": "Standard delivery service", "DeliveryTime": "5-10 days", "Price": 25 },
+  { "ShortName": "Express", "Description": "Express delivery service", "DeliveryTime": "2-3 days", "Price": 50 },
+  { "ShortName": "Next Day", "Description": "Next day delivery service", "DeliveryTime": "1 day", "Price": 100 }
+]
